@@ -1,0 +1,3559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConciseData Consult Limited — Executive Intelligence Platform</title>
+<meta name="description" content="ConciseOne replaces manual spreadsheet reporting with a live AI-powered executive dashboard and automated board-ready reports. Built for operations-driven companies.">
+<meta name="keywords" content="executive reporting, AI dashboard, board pack generator, mining analytics, operational intelligence, junior mining, executive intelligence platform">
+<!-- ======================================================
+     DEVELOPER ANNOTATIONS — READ BEFORE CODING
+     ======================================================
+     DOMAIN: www.concisedataconsult.com
+     BRAND: ConciseData Consult Limited | Product: ConciseOne™
+     TONE: Luxury precision data — think Bloomberg Terminal meets McKinsey
+     PRIMARY MARKET: Canadian junior mining companies (TSX, TSX-V)
+     FUTURE MARKETS: Energy, Agriculture, Manufacturing
+     
+     COLOR SYSTEM:
+       --navy-950: #07091A  (deepest background)
+       --navy-900: #0B0F24  (main background)
+       --navy-800: #111630  (card surfaces)
+       --navy-700: #1A2040  (elevated surfaces)
+       --navy-600: #243054  (borders/dividers)
+       --gold-400: #C9A84C  (primary accent — brand gold)
+       --gold-300: #D9BF7A  (hover states)
+       --gold-200: #ECD9AA  (subtle gold fills)
+       --electric: #3EAEFF  (AI/data accent)
+       --electric-dim: #2178B5 (subtle electric)
+       --text-primary: #F0EDE4 (warm off-white — easier on eyes)
+       --text-secondary: #A8A49A (muted body)
+       --text-tertiary: #6A6660 (captions/labels)
+     
+     FONTS:
+       Display: "Cormorant Garamond" — for H1, H2 headlines (Google Fonts)
+       Body: "DM Sans" — all body, labels, nav, CTAs (Google Fonts)
+       Mono: "JetBrains Mono" — for data/metrics (Google Fonts)
+     
+     SECTIONS (in order):
+       01. Sticky Navigation Bar
+       02. Hero Section
+       03. Social Proof / Traction Bar
+       04. Problem Statement
+       05. Solution Overview (ConciseOne)
+       06. How It Works (3 steps)
+       07. Core Features Grid
+       08. Industries We Serve (mining + future)
+       09. Competitive Positioning
+       10. Validation & Traction
+       11. Pricing
+       12. Team
+       13. Pilot CTA Section
+       14. Footer
+     
+     RESPONSIVE BREAKPOINTS:
+       Mobile: < 768px
+       Tablet: 768px – 1024px
+       Desktop: > 1024px
+     
+     ANIMATIONS: Subtle — fade-in on scroll, gold underline on nav hover,
+     number counter animation on stats. No distracting motion.
+     
+     SEO: All H1/H2/H3 tags written for search intent.
+     Primary search terms: "executive reporting platform", "AI board pack generator",
+     "mining KPI dashboard", "automated reporting software"
+     ====================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* =============================================
+     DESIGN TOKENS
+     ============================================= */
+  :root {
+    --navy-950: #07091A;
+    --navy-900: #0B0F24;
+    --navy-800: #111630;
+    --navy-700: #1A2040;
+    --navy-600: #243054;
+    --navy-500: #2E3D6A;
+    --gold-400: #C9A84C;
+    --gold-300: #D9BF7A;
+    --gold-200: #ECD9AA;
+    --gold-100: #F7F0DC;
+    --electric: #3EAEFF;
+    --electric-dim: #2178B5;
+    --electric-glow: rgba(62, 174, 255, 0.12);
+    --text-primary: #F0EDE4;
+    --text-secondary: #A8A49A;
+    --text-tertiary: #6A6660;
+    --border-subtle: rgba(201, 168, 76, 0.12);
+    --border-mid: rgba(201, 168, 76, 0.25);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --max-w: 1200px;
+    --section-pad: 96px 24px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+  }
+
+  /* =============================================
+     RESET & BASE
+     ============================================= */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    background: var(--navy-900);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* =============================================
+     TYPOGRAPHY HELPERS
+     ============================================= */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-400);
+  }
+
+  .display-xl {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .display-lg {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .display-md {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .gold { color: var(--gold-400); }
+  .electric { color: var(--electric); }
+  .muted { color: var(--text-secondary); }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold-400);
+  }
+
+  /* =============================================
+     BUTTONS
+     ============================================= */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--gold-400);
+    color: var(--navy-950);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover {
+    background: var(--gold-300);
+    transform: translateY(-1px);
+  }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 27px;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-mid);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-ghost:hover {
+    border-color: var(--gold-400);
+    background: rgba(201, 168, 76, 0.05);
+  }
+
+  .btn-electric {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--electric);
+    color: var(--navy-950);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-electric:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  /* =============================================
+     DIVIDERS
+     ============================================= */
+  .gold-rule {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-400), transparent);
+    opacity: 0.3;
+    margin: 0;
+  }
+
+  /* =============================================
+     01. NAVIGATION
+     DEV NOTE: Sticky. Blur backdrop on scroll.
+     On mobile: hamburger menu with slide-in drawer.
+     Logo: "ConciseData" in DM Sans 500, with
+     a small gold diamond (◆) as brand mark before text.
+     ============================================= */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(11, 15, 36, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background 0.3s;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo-mark {
+    width: 32px;
+    height: 32px;
+    background: var(--gold-400);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-logo-mark svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--navy-950);
+  }
+  .nav-logo-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
+  }
+  .nav-logo-text span {
+    color: var(--gold-400);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 100%;
+    height: 1px;
+    background: var(--gold-400);
+    transition: right 0.25s ease;
+  }
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
+  .nav-links a:hover::after {
+    right: 0;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* =============================================
+     02. HERO SECTION
+     DEV NOTE: Full viewport height. 
+     Left: headline + CTAs. Right: Dashboard mockup image.
+     Background: Subtle animated grid/dot pattern.
+     The large italic word "Concise" should appear
+     in Cormorant Garamond Italic as a huge background
+     watermark at 8% opacity — purely decorative.
+     Diagonal gold accent line across bottom-left.
+     ============================================= */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* DEV NOTE: This is a CSS grid dot pattern for background texture */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(201, 168, 76, 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* DEV NOTE: Radial glow behind dashboard mockup (right side) */
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -10%;
+    top: 20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(62, 174, 255, 0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px 6px 8px;
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border-mid);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--gold-300);
+    margin-bottom: 28px;
+  }
+  .hero-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-400);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold-400);
+  }
+
+  .hero-subhead {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .hero-proof-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+  .hero-proof-item svg {
+    width: 14px;
+    height: 14px;
+    color: var(--gold-400);
+    flex-shrink: 0;
+  }
+
+  /* DEV NOTE: Dashboard mockup on right side.
+     Use a high-res screenshot of the ConciseOne dashboard mockup.
+     Add a border: 1px solid rgba(201,168,76,0.2) and border-radius: 16px.
+     Subtle box-shadow: 0 32px 80px rgba(0,0,0,0.6) for depth.
+     The mockup floats slightly — add transform: perspective(800px) rotateY(-6deg) rotateX(3deg)
+     for a subtle 3D tilt effect. */
+  .hero-visual {
+    position: relative;
+  }
+  .hero-dashboard-frame {
+    background: var(--navy-800);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(201, 168, 76, 0.1);
+    transform: perspective(900px) rotateY(-4deg) rotateX(2deg);
+    transition: transform 0.4s ease;
+  }
+  .hero-dashboard-frame:hover {
+    transform: perspective(900px) rotateY(-1deg) rotateX(0deg);
+  }
+  .hero-dashboard-bar {
+    height: 36px;
+    background: var(--navy-950);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background: #FF5F5A; }
+  .dot-yellow { background: #FFBE2E; }
+  .dot-green { background: #28C840; }
+  .hero-dashboard-body {
+    padding: 20px;
+  }
+  /* DEV NOTE: REPLACE THIS PLACEHOLDER with actual dashboard screenshot */
+  .dashboard-placeholder {
+    background: var(--navy-800);
+    border-radius: var(--radius-md);
+    padding: 20px;
+  }
+  .dash-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .dash-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .dash-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #28C840;
+  }
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #28C840;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .kpi-tile {
+    background: var(--navy-700);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .kpi-label {
+    font-size: 9px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .kpi-value {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .kpi-change {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .kpi-change.up { color: #28C840; }
+  .kpi-change.down { color: #FF5F5A; }
+
+  .chart-area {
+    background: var(--navy-700);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .chart-area::before {
+    content: 'Production Trend — Last 12 Months';
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 9px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    background: linear-gradient(to top, var(--electric-dim), var(--electric));
+    opacity: 0.7;
+    margin-top: 24px;
+  }
+
+  .ai-insight-card {
+    background: rgba(62, 174, 255, 0.06);
+    border: 1px solid rgba(62, 174, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .ai-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--electric);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+    color: var(--navy-950);
+    font-weight: 700;
+  }
+  .ai-text {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .ai-text strong {
+    color: var(--electric);
+    font-weight: 500;
+  }
+
+  /* =============================================
+     03. SOCIAL PROOF / TRACTION BAR
+     DEV NOTE: Full-width band. Scrolling marquee on mobile.
+     Shows logos/names of validation partners.
+     ============================================= */
+  .traction-bar {
+    padding: 24px;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--navy-950);
+  }
+  .traction-bar-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .traction-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+  }
+  .traction-partners {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .partner-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .partner-item:hover { opacity: 1; }
+  .partner-item .partner-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--navy-700);
+    border-radius: 4px;
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold-400);
+  }
+
+  /* =============================================
+     04. PROBLEM STATEMENT
+     DEV NOTE: Dark section. 3 stats + narrative paragraph.
+     Stats should animate (count up) on scroll entry.
+     Use IntersectionObserver for this.
+     ============================================= */
+  .problem {
+    padding: var(--section-pad);
+    background: var(--navy-950);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problem-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .problem-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .stat-item {
+    border-left: 2px solid var(--gold-400);
+    padding-left: 24px;
+  }
+  .stat-number {
+    font-family: var(--font-mono);
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--gold-400);
+    line-height: 1;
+    margin-bottom: 8px;
+    /* DEV NOTE: Animate this number counting up on scroll */
+  }
+  .stat-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .stat-source {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  .problem-content {}
+  .problem-content .display-md {
+    margin-bottom: 24px;
+  }
+  .problem-content p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .problem-quote {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--navy-800);
+    border-left: 3px solid var(--gold-400);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .problem-quote p {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text-primary);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .problem-quote cite {
+    font-size: 12px;
+    font-style: normal;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* =============================================
+     05. SOLUTION OVERVIEW
+     DEV NOTE: Light navy background for contrast shift.
+     4 module cards in a 2x2 grid.
+     Each card has an icon (SVG), title, and 1-line description.
+     ============================================= */
+  .solution {
+    padding: var(--section-pad);
+    background: var(--navy-900);
+    text-align: center;
+  }
+
+  .solution-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .solution-headline-group {
+    max-width: 640px;
+    margin: 0 auto 64px;
+  }
+  .solution-headline-group .display-lg {
+    margin-bottom: 20px;
+  }
+  .solution-headline-group p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .solution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    background: var(--navy-700);
+    border: 1px solid var(--border-mid);
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .solution-badge-text {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--gold-300);
+    letter-spacing: 0.1em;
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+
+  .module-card {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 32px 36px;
+    transition: border-color 0.25s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .module-card::before {
+    /* DEV NOTE: Hover glow effect in top-left corner */
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .module-card:hover { border-color: var(--border-mid); transform: translateY(-4px); }
+  .module-card:hover::before { opacity: 1; }
+  .module-card.gold-hover::before { background: radial-gradient(circle, rgba(201,168,76,0.15), transparent); }
+  .module-card.electric-hover::before { background: radial-gradient(circle, rgba(62,174,255,0.12), transparent); }
+
+  .module-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .module-icon.gold-bg {
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+  }
+  .module-icon.electric-bg {
+    background: rgba(62, 174, 255, 0.1);
+    border: 1px solid rgba(62, 174, 255, 0.2);
+  }
+  .module-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .module-card h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+  .module-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .module-tag {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .module-tag.gold { background: rgba(201,168,76,0.1); color: var(--gold-300); border: 1px solid rgba(201,168,76,0.2); }
+  .module-tag.electric { background: rgba(62,174,255,0.1); color: var(--electric); border: 1px solid rgba(62,174,255,0.2); }
+
+  .solution-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  /* =============================================
+     06. HOW IT WORKS
+     DEV NOTE: 3-step flow with connecting lines.
+     Alternating layout: step left/visual right, then visual left/step right.
+     On mobile: stacked vertically.
+     ============================================= */
+  .how-it-works {
+    padding: var(--section-pad);
+    background: var(--navy-950);
+    position: relative;
+  }
+
+  .how-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .how-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 80px;
+  }
+  .how-header .display-lg { margin-bottom: 16px; }
+  .how-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    padding: 64px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+  }
+  .step:last-child { border-bottom: none; }
+
+  /* DEV NOTE: Alternate visual left/right per step */
+  .step:nth-child(even) .step-content { order: 2; }
+  .step:nth-child(even) .step-visual { order: 1; }
+
+  .step-number {
+    font-family: var(--font-mono);
+    font-size: 72px;
+    font-weight: 400;
+    color: var(--navy-700);
+    line-height: 1;
+    margin-bottom: 8px;
+    /* DEV NOTE: This big number is decorative — low contrast intentionally */
+  }
+  .step-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-400);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .step-title {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .step-body {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .step-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .step-bullet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .step-bullet::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold-400);
+    flex-shrink: 0;
+  }
+
+  .step-visual {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* DEV NOTE: Replace with actual UI screenshot per step */
+  }
+  .step-visual-placeholder {
+    width: 100%;
+    min-height: 220px;
+    background: var(--navy-700);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--border-mid);
+  }
+  .step-visual-label {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    text-align: center;
+  }
+
+  /* Data Sources Visual (Step 1) */
+  .sources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  .source-chip {
+    background: var(--navy-700);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .source-chip-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .source-chip-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* AI Pipeline Visual (Step 2) */
+  .pipeline-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .pipeline-stage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--navy-700);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .pipeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pipeline-stage-check {
+    margin-left: auto;
+    font-size: 10px;
+    color: #28C840;
+  }
+
+  /* =============================================
+     07. CORE FEATURES
+     DEV NOTE: 3-column grid, 6 features.
+     Each has icon + title + 2-line description.
+     Hover: subtle gold border glow.
+     ============================================= */
+  .features {
+    padding: var(--section-pad);
+    background: var(--navy-900);
+  }
+
+  .features-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .features-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 56px;
+  }
+  .features-header .display-lg { }
+  .features-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .feature-item {
+    background: var(--navy-800);
+    padding: 36px 32px;
+    transition: background 0.2s;
+  }
+  .feature-item:hover { background: var(--navy-700); }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feature-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .feature-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* =============================================
+     08. INDUSTRIES
+     DEV NOTE: Mining (current) + expansion sectors.
+     Mining card is bright/active; others are dimmed with "Coming Soon" badge.
+     This signals ambition without over-promising.
+     ============================================= */
+  .industries {
+    padding: var(--section-pad);
+    background: var(--navy-950);
+  }
+
+  .industries-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .industries-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 56px;
+  }
+  .industries-header .display-lg { margin-bottom: 16px; }
+  .industries-header p { font-size: 16px; color: var(--text-secondary); }
+
+  .industries-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .industry-card {
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .industry-card:hover { transform: translateY(-3px); }
+  .industry-card.active {
+    background: var(--navy-800);
+    border-color: var(--border-mid);
+  }
+  .industry-card.active:hover { border-color: var(--gold-400); }
+  .industry-card.future {
+    background: var(--navy-800);
+    opacity: 0.5;
+  }
+  .industry-card.future:hover { opacity: 0.75; }
+
+  .industry-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .industry-name {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .industry-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .industry-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .industry-status.live {
+    background: rgba(40, 200, 64, 0.1);
+    color: #28C840;
+    border: 1px solid rgba(40, 200, 64, 0.2);
+  }
+  .industry-status.soon {
+    background: rgba(201, 168, 76, 0.08);
+    color: var(--gold-400);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .industry-bullets {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .industry-bullet {
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 8px;
+  }
+  .industry-bullet::before {
+    content: '→';
+    color: var(--gold-400);
+    flex-shrink: 0;
+  }
+
+  /* =============================================
+     09. COMPETITIVE POSITIONING
+     DEV NOTE: Simple 3-column comparison.
+     "Traditional BI" | "Enterprise ERP" | "ConciseOne" (highlighted)
+     Center column (ConciseOne) has gold border and slight elevation.
+     ============================================= */
+  .positioning {
+    padding: var(--section-pad);
+    background: var(--navy-900);
+  }
+
+  .positioning-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .positioning-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 56px;
+  }
+  .positioning-header .display-lg { margin-bottom: 16px; }
+  .positioning-header p { font-size: 16px; color: var(--text-secondary); }
+
+  .comparison-cards {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .comparison-card {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+  }
+  .comparison-card.featured {
+    border-color: var(--gold-400);
+    background: var(--navy-700);
+    transform: scale(1.02);
+    position: relative;
+  }
+  .comparison-card.featured::before {
+    content: 'Best Fit';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold-400);
+    color: var(--navy-950);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+  }
+
+  .comp-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+  }
+  .comp-card-name {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .comparison-card.featured .comp-card-name { color: var(--gold-300); }
+
+  .comp-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .comp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .comp-check {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .comp-check.yes { background: rgba(40,200,64,0.15); color: #28C840; }
+  .comp-check.no { background: rgba(255,95,90,0.15); color: #FF5F5A; }
+  .comp-check.partial { background: rgba(201,168,76,0.15); color: var(--gold-400); }
+
+  /* =============================================
+     10. VALIDATION & TRACTION
+     DEV NOTE: 3 metric counters + key validation events.
+     Counter animations on scroll entry.
+     ============================================= */
+  .traction {
+    padding: var(--section-pad);
+    background: var(--navy-950);
+  }
+
+  .traction-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .traction-header {
+    max-width: 540px;
+    margin-bottom: 64px;
+  }
+  .traction-header .display-lg { margin-bottom: 16px; }
+  .traction-header p { font-size: 16px; color: var(--text-secondary); }
+
+  .traction-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 64px;
+  }
+  .traction-metric {
+    background: var(--navy-800);
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .traction-number {
+    font-family: var(--font-mono);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--gold-400);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .traction-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .traction-events {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .traction-event {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .traction-event-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .traction-event-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+  .traction-event-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* =============================================
+     11. PRICING
+     DEV NOTE: Two tiers: Pilot + Growth.
+     Simple, transparent. Add footnote about pricing logic.
+     ============================================= */
+  .pricing {
+    padding: var(--section-pad);
+    background: var(--navy-900);
+  }
+
+  .pricing-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .pricing-header .display-lg { margin-bottom: 16px; }
+  .pricing-header p { font-size: 16px; color: var(--text-secondary); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .pricing-card {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    position: relative;
+  }
+  .pricing-card.featured {
+    border-color: var(--gold-400);
+    background: var(--navy-700);
+  }
+  .pricing-card-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--gold-400);
+    color: var(--navy-950);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+  }
+
+  .pricing-tier {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+  }
+  .pricing-name {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .pricing-card.featured .pricing-name { color: var(--gold-300); }
+
+  .pricing-price {
+    margin: 24px 0 28px;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 24px;
+  }
+  .pricing-amount {
+    font-family: var(--font-mono);
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+  .pricing-amount sup { font-size: 22px; vertical-align: top; margin-top: 8px; display: inline-block; color: var(--text-secondary); }
+  .pricing-amount span.mo { font-size: 16px; color: var(--text-secondary); font-weight: 400; }
+  .pricing-per-user {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-top: 6px;
+  }
+
+  .pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .pricing-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .pricing-feature-check {
+    color: var(--gold-400);
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 14px;
+  }
+
+  .pricing-footnote {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* =============================================
+     12. TEAM
+     DEV NOTE: Headshots in a 2+2 grid.
+     Founders prominent (larger cards). Coaches secondary.
+     ============================================= */
+  .team {
+    padding: var(--section-pad);
+    background: var(--navy-950);
+  }
+
+  .team-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .team-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 56px;
+  }
+  .team-header .display-lg { margin-bottom: 16px; }
+  .team-header p { font-size: 16px; color: var(--text-secondary); }
+
+  .founders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .advisors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .team-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .team-section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--text-tertiary);
+    opacity: 0.4;
+    display: block;
+  }
+
+  .team-card {
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 32px 36px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .team-card:hover { border-color: var(--border-mid); }
+  .team-card.advisor {
+    background: var(--navy-900);
+    padding: 24px 28px;
+  }
+
+  .team-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--navy-600);
+    border: 2px solid var(--border-mid);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--gold-400);
+    font-weight: 400;
+    /* DEV NOTE: Replace with headshot <img> when photos available */
+  }
+  .team-avatar.small {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .team-info {}
+  .team-name {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .team-card.advisor .team-name { font-size: 20px; }
+  .team-role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold-400);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .team-card.advisor .team-role { font-size: 11px; color: var(--electric); }
+  .team-bio {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .team-card.advisor .team-bio { font-size: 13px; }
+  .team-affiliations {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .affiliation-tag {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    background: var(--navy-700);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-subtle);
+  }
+
+  /* =============================================
+     13. CTA / PILOT SECTION
+     DEV NOTE: Full-width dark section with centered CTA.
+     Gold accent lines decorating background.
+     ============================================= */
+  .cta-section {
+    padding: 120px 24px;
+    background: var(--navy-800);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  /* DEV NOTE: Add diagonal gold lines as decorative background SVG */
+
+  .cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid var(--border-mid);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--gold-300);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .cta-inner .display-lg {
+    margin-bottom: 20px;
+  }
+  .cta-inner p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .cta-sub {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  /* =============================================
+     14. FOOTER
+     DEV NOTE: 4-column footer.
+     Logo + tagline | Links | Product | Contact
+     Bottom bar: copyright + legal links.
+     ============================================= */
+  .footer {
+    background: var(--navy-950);
+    border-top: 1px solid var(--border-subtle);
+    padding: 64px 24px 32px;
+  }
+
+  .footer-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 32px;
+  }
+
+  .footer-brand {}
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .footer-logo-mark {
+    width: 28px;
+    height: 28px;
+    background: var(--gold-400);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-logo-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .footer-tagline {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 260px;
+  }
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+  .social-link {
+    width: 36px;
+    height: 36px;
+    background: var(--navy-800);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .social-link:hover { border-color: var(--border-mid); background: var(--navy-700); }
+  .social-link svg { width: 16px; height: 16px; color: var(--text-secondary); }
+
+  .footer-col h4 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-links a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold-400); }
+
+  .footer-contact-item {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .footer-contact-item a { color: var(--gold-300); }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-copy {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+  .footer-legal {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-legal a {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    transition: color 0.2s;
+  }
+  .footer-legal a:hover { color: var(--text-secondary); }
+
+  /* =============================================
+     RESPONSIVE — MOBILE
+     ============================================= */
+  @media (max-width: 768px) {
+    :root { --section-pad: 64px 20px; }
+
+    .nav-links { display: none; } /* Replace with hamburger menu */
+
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; } /* Show as below-the-fold on mobile */
+
+    .problem-inner { grid-template-columns: 1fr; gap: 48px; }
+    .problem-stats { flex-direction: row; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 140px; }
+
+    .modules-grid { grid-template-columns: 1fr; }
+
+    .step { grid-template-columns: 1fr; }
+    .step:nth-child(even) .step-content { order: unset; }
+    .step:nth-child(even) .step-visual { order: unset; }
+
+    .features-header { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
+
+    .industries-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Report types strip — collapse to 2 cols on mobile */
+    [style*="repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+
+    .comparison-cards { grid-template-columns: 1fr; }
+    .comparison-card.featured { transform: none; }
+
+    .traction-grid { grid-template-columns: 1fr 1fr; }
+    .traction-events { grid-template-columns: 1fr; }
+
+    .pricing-grid { grid-template-columns: 1fr; }
+
+    .founders-grid { grid-template-columns: 1fr; }
+    .advisors-grid { grid-template-columns: 1fr; }
+
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  /* =============================================
+     SCROLL ANIMATIONS
+     DEV NOTE: Add JS IntersectionObserver to apply
+     .is-visible class when elements enter viewport.
+     ============================================= */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up-delay-1 { transition-delay: 0.1s; }
+  .fade-up-delay-2 { transition-delay: 0.2s; }
+  .fade-up-delay-3 { transition-delay: 0.3s; }
+
+  /* =============================================
+     DEV NOTE — WIREFRAME ANNOTATIONS
+     The yellow annotation boxes are for REFERENCE ONLY.
+     Remove all .annotation elements before production.
+     ============================================= */
+  .annotation {
+    position: absolute;
+    background: #FFEB3B;
+    color: #1A1A1A;
+    font-size: 11px;
+    font-family: monospace;
+    padding: 4px 8px;
+    border-radius: 3px;
+    z-index: 999;
+    line-height: 1.3;
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     01. NAVIGATION
+     ================================================ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="ConciseData Home">
+    <div class="nav-logo-mark">
+      <!-- DEV NOTE: Replace with finalized SVG brand mark -->
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="6" height="6" rx="1" fill="#07091A"/>
+        <rect x="10" y="2" width="6" height="6" rx="1" fill="#07091A" opacity="0.6"/>
+        <rect x="2" y="10" width="6" height="6" rx="1" fill="#07091A" opacity="0.6"/>
+        <rect x="10" y="10" width="6" height="6" rx="1" fill="#07091A" opacity="0.3"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">Concise<span>Data</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <!-- DEV NOTE: Active state = gold underline, font-weight: 500 -->
+    <li><a href="#product">Product</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#team">About</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="#contact" class="btn-ghost" style="padding: 9px 20px; font-size: 13px;">Contact</a>
+    <a href="#pilot" class="btn-primary" style="padding: 9px 20px; font-size: 13px;">
+      Request a Demo
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ================================================
+     02. HERO SECTION
+     ================================================ -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-inner container" style="max-width: var(--max-w); margin: 0 auto; width: 100%;">
+    
+    <!-- Left: Copy -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Now serving Canadian junior mining companies
+      </div>
+
+      <h1 class="hero-headline">
+        Stop Assembling.<br>
+        Start <em>Deciding.</em>
+      </h1>
+
+      <p class="hero-subhead">
+        ConciseOne is the AI-powered executive intelligence platform that replaces 
+        manual spreadsheet reporting with a live dashboard and board-ready reports — 
+        generated automatically.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#pilot" class="btn-primary">
+          Request a Pilot Demo
+          <svg viewBox="0 0 16 16" fill="none" style="width:16px;height:16px;"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+
+      <div class="hero-proof">
+        <div class="hero-proof-item">
+          <svg viewBox="0 0 14 14" fill="currentColor"><path d="M7 0L8.57 5.18H14L9.71 8.38L11.28 13.56L7 10.36L2.72 13.56L4.29 8.38L0 5.18H5.43L7 0Z"/></svg>
+          Validated at PDAC 2026
+        </div>
+        <div class="hero-proof-item">
+          <svg viewBox="0 0 14 14" fill="currentColor"><path d="M7 0L8.57 5.18H14L9.71 8.38L11.28 13.56L7 10.36L2.72 13.56L4.29 8.38L0 5.18H5.43L7 0Z"/></svg>
+          DMZ Black Innovation Programs
+        </div>
+        <div class="hero-proof-item">
+          <svg viewBox="0 0 14 14" fill="currentColor"><path d="M7 0L8.57 5.18H14L9.71 8.38L11.28 13.56L7 10.36L2.72 13.56L4.29 8.38L0 5.18H5.43L7 0Z"/></svg>
+          Schulich School of Business
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Dashboard Mockup -->
+    <div class="hero-visual">
+      <div class="hero-dashboard-frame">
+        <div class="hero-dashboard-bar">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <span style="margin-left: 8px; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono);">ConciseOne — Executive Dashboard</span>
+        </div>
+        <div class="hero-dashboard-body">
+          <!-- KPI Tiles -->
+          <div class="dash-header-row">
+            <span class="dash-title">Akwaaba Gold — Q1 2026</span>
+            <span class="dash-live-badge"><span class="live-dot"></span> Live</span>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-tile">
+              <div class="kpi-label">Production</div>
+              <div class="kpi-value">8,240</div>
+              <div class="kpi-change up">↑ 3.2% vs plan</div>
+            </div>
+            <div class="kpi-tile">
+              <div class="kpi-label">AISC / oz</div>
+              <div class="kpi-value">$1,187</div>
+              <div class="kpi-change up">↑ On budget</div>
+            </div>
+            <div class="kpi-tile">
+              <div class="kpi-label">Recovery</div>
+              <div class="kpi-value">91.4%</div>
+              <div class="kpi-change down">↓ -0.8%</div>
+            </div>
+            <div class="kpi-tile">
+              <div class="kpi-label">LTI Rate</div>
+              <div class="kpi-value">0.0</div>
+              <div class="kpi-change up">✓ Target met</div>
+            </div>
+          </div>
+          <!-- Chart -->
+          <div class="chart-area">
+            <div class="bar" style="height: 55%;"></div>
+            <div class="bar" style="height: 62%;"></div>
+            <div class="bar" style="height: 48%;"></div>
+            <div class="bar" style="height: 71%;"></div>
+            <div class="bar" style="height: 58%;"></div>
+            <div class="bar" style="height: 65%;"></div>
+            <div class="bar" style="height: 79%;"></div>
+            <div class="bar" style="height: 68%;"></div>
+            <div class="bar" style="height: 83%;"></div>
+            <div class="bar" style="height: 72%;"></div>
+            <div class="bar" style="height: 88%;"></div>
+            <div class="bar" style="height: 95%; background: linear-gradient(to top, var(--gold-400), var(--gold-300));"></div>
+          </div>
+          <!-- AI Insight -->
+          <div class="ai-insight-card">
+            <div class="ai-icon">AI</div>
+            <div class="ai-text">
+              <strong>Recovery dropped 0.8% in Week 11.</strong> Root cause: reagent dosage 
+              variance in CIL circuit. Ball mill throughput unaffected. Recommend reagent audit.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DEV NOTE: Add floating "Board Pack Generated" toast notification 
+           positioned bottom-right of the dashboard frame. Animate it sliding up. -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================
+     03. SOCIAL PROOF BAR
+     ================================================ -->
+<div class="traction-bar" role="complementary" aria-label="Partners and validators">
+  <div class="traction-bar-inner">
+    <span class="traction-label">Validated With</span>
+    <div class="traction-partners">
+      <div class="partner-item">
+        <div class="partner-icon">P</div>
+        PDAC 2026
+      </div>
+      <div class="partner-item">
+        <div class="partner-icon">D</div>
+        DMZ BIP · Cohort 1
+      </div>
+      <div class="partner-item">
+        <div class="partner-icon">S</div>
+        Schulich Startups
+      </div>
+      <div class="partner-item">
+        <div class="partner-icon">C</div>
+        Canada High Commission
+      </div>
+      <div class="partner-item">
+        <div class="partner-icon">Y</div>
+        York University
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     04. PROBLEM STATEMENT
+     ================================================ -->
+<section class="problem" id="problem" aria-labelledby="problem-heading">
+  <div class="problem-inner">
+    
+    <!-- Stats -->
+    <div class="problem-stats">
+      <div class="stat-item fade-up">
+        <!-- DEV NOTE: JS counter animation: 0 → 40 on scroll -->
+        <div class="stat-number">40<span style="font-size:28px;">%</span></div>
+        <div class="stat-desc">of reporting time lost to manual data assembly before a single insight reaches the executive table</div>
+        <div class="stat-source">Source: ConciseData customer discovery — 9 interviews</div>
+      </div>
+      <div class="stat-item fade-up fade-up-delay-1">
+        <div class="stat-number">3–5<span style="font-size:28px; color: var(--text-secondary);">days</span></div>
+        <div class="stat-desc">average board pack cycle time for junior mining companies relying on spreadsheet-based reporting</div>
+        <div class="stat-source">Source: Validated discovery conversations, PDAC 2026</div>
+      </div>
+      <div class="stat-item fade-up fade-up-delay-2">
+        <div class="stat-number">1,073</div>
+        <div class="stat-desc">Canadian-listed junior mining companies (TSX + TSX-V) with no purpose-built executive reporting layer</div>
+        <div class="stat-source">Source: TMX Group market data</div>
+      </div>
+    </div>
+
+    <!-- Narrative -->
+    <div class="problem-content fade-up">
+      <div class="section-label">
+        <span class="eyebrow">The Problem</span>
+      </div>
+      <h2 id="problem-heading" class="display-md">
+        Your data exists.<br>
+        Your insight <em style="font-style:italic; color: var(--gold-400);">doesn't.</em>
+      </h2>
+      <p>
+        Operations-driven companies — mining, energy, agriculture — generate enormous 
+        amounts of operational and financial data. But that data lives in silos: 
+        disconnected ERPs, spreadsheets built by analysts who have since left, 
+        and reporting templates that take days to assemble.
+      </p>
+      <p>
+        By the time a board pack reaches the C-suite, it is already history. 
+        Decisions get made on stale data, incomplete narratives, and gut instinct — 
+        not because leaders aren't capable, but because the tools they rely on 
+        weren't built for them.
+      </p>
+      <div class="problem-quote">
+        <p>"We spend three days pulling the same numbers together every month. 
+        By the time the report is done, we're already behind."</p>
+        <cite>— CFO, Canadian Junior Mining Company (PDAC 2026 Discovery Interview)</cite>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     05. SOLUTION OVERVIEW
+     ================================================ -->
+<section class="solution" id="product" aria-labelledby="solution-heading">
+  <div class="solution-inner">
+    
+    <div class="solution-headline-group fade-up">
+      <div class="solution-badge">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--gold-400);display:block;flex-shrink:0;"></span>
+        <span class="solution-badge-text">ConciseOne™ Platform</span>
+      </div>
+      <h2 id="solution-heading" class="display-lg">
+        One platform. Every executive insight.<br>
+        <em style="font-style:italic; color: var(--gold-400);">Automatically delivered.</em>
+      </h2>
+      <p>
+        ConciseOne connects your operational and financial data sources, validates and 
+        standardizes every KPI, and delivers a live executive dashboard plus AI-generated 
+        board packs — in hours, not days.
+      </p>
+    </div>
+
+    <div class="modules-grid">
+      <!-- Module 1 -->
+      <div class="module-card gold-hover fade-up">
+        <div class="module-icon gold-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <h3>Executive Dashboard</h3>
+        <p>One screen. Every critical KPI, alert, and trend — live. 
+        Drill from board-level to site, equipment, and root-cause detail in seconds. 
+        No spreadsheets. No waiting.</p>
+        <span class="module-tag gold">Lead MVP Feature</span>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card electric-hover fade-up fade-up-delay-1">
+        <div class="module-icon electric-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--electric)" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>AI Insight Engine</h3>
+        <p>Ask plain-English questions about your operations. ConciseOne's RAG-powered 
+        AI answers with charts, driver attribution, and cited data — grounded in 
+        your validated KPIs only. Never hallucinated.</p>
+        <span class="module-tag electric">AI-Powered</span>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card gold-hover fade-up fade-up-delay-2">
+        <div class="module-icon gold-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-400)" stroke-width="1.5">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+        </div>
+        <h3>Reporting Pack Generator</h3>
+        <p>Board packs are just the start. ConciseOne generates any report your 
+        stakeholders need — from investor updates to site-level operational summaries — 
+        all from the same validated data layer. AI writes the narrative. You review and approve. 
+        Every report is downloadable as PDF or DOCX.</p>
+        <span class="module-tag gold">Core Feature</span>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card electric-hover fade-up fade-up-delay-3">
+        <div class="module-icon electric-bg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--electric)" stroke-width="1.5">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3>Data Validation Engine</h3>
+        <p>Automated anomaly detection, business rule checks, and completeness audits 
+        run before any data reaches your executives. 
+        Full audit lineage — trace any figure to its source.</p>
+        <span class="module-tag electric">Governance Layer</span>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         REPORT TYPES STRIP
+         DEV NOTE: Horizontal scrolling row of report type pills on mobile.
+         Each pill is clickable and opens a tooltip/modal preview of that report type.
+         This section sits between the modules grid and the solution CTA.
+         ===================================================== -->
+    <div style="margin: 48px 0 16px; padding: 36px; background: var(--navy-800); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);" class="fade-up">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-bottom: 28px;">
+        <div>
+          <div class="eyebrow" style="margin-bottom: 8px;">Report Library</div>
+          <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 400; color: var(--text-primary); line-height: 1.2;">
+            Every report your stakeholders need.<br>
+            <em style="font-style: italic; color: var(--gold-400);">All from one platform.</em>
+          </h3>
+        </div>
+        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; max-width: 380px; flex-shrink: 0;">
+          ConciseOne is not limited to board packs. Every report type is 
+          generated from the same validated data layer — with consistent 
+          KPI definitions and AI-written narrative. 
+          Each report is fully customizable to your company's structure, 
+          stakeholder requirements, and preferred format, then downloaded 
+          as PDF or DOCX in one click.
+        </p>
+      </div>
+
+      <!-- Report type grid -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+        <!-- Board Pack -->
+        <div style="background: var(--navy-700); border: 1px solid var(--border-mid); border-radius: var(--radius-md); padding: 20px; position: relative;">
+          <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: var(--gold-400); border-radius: var(--radius-md) var(--radius-md) 0 0;"></div>
+          <div style="font-size: 20px; margin-bottom: 10px;">📋</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Board Pack</div>
+          <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            Executive summary, KPI dashboard, AISC waterfall, production narrative, 
+            risk &amp; outlook. AI-written. Board-ready.
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="padding: 2px 8px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 100px; font-size: 10px; color: var(--gold-300);">Monthly</span>
+            <span style="padding: 2px 8px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 100px; font-size: 10px; color: var(--gold-300);">Quarterly</span>
+            <span style="padding: 2px 8px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 100px; font-size: 10px; color: var(--gold-300);">PDF / DOCX</span>
+          </div>
+        </div>
+
+        <!-- Investor Update -->
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+          <div style="font-size: 20px; margin-bottom: 10px;">📈</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Investor Update</div>
+          <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            Production highlights, cost performance, exploration milestones, 
+            and forward guidance. Formatted for retail and institutional investors.
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="padding: 2px 8px; background: rgba(62,174,255,0.08); border: 1px solid rgba(62,174,255,0.15); border-radius: 100px; font-size: 10px; color: var(--electric);">Quarterly</span>
+            <span style="padding: 2px 8px; background: rgba(62,174,255,0.08); border: 1px solid rgba(62,174,255,0.15); border-radius: 100px; font-size: 10px; color: var(--electric);">PDF</span>
+          </div>
+        </div>
+
+        <!-- Operational Report -->
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+          <div style="font-size: 20px; margin-bottom: 10px;">⚙️</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Operational Report</div>
+          <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            Site-level production, equipment utilization, shift performance, 
+            and maintenance summaries. For COO and site managers.
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="padding: 2px 8px; background: rgba(62,174,255,0.08); border: 1px solid rgba(62,174,255,0.15); border-radius: 100px; font-size: 10px; color: var(--electric);">Weekly</span>
+            <span style="padding: 2px 8px; background: rgba(62,174,255,0.08); border: 1px solid rgba(62,174,255,0.15); border-radius: 100px; font-size: 10px; color: var(--electric);">Monthly</span>
+          </div>
+        </div>
+
+        <!-- Custom Report -->
+        <div style="background: var(--navy-700); border: 1px dashed var(--border-mid); border-radius: var(--radius-md); padding: 20px;">
+          <div style="font-size: 20px; margin-bottom: 10px;">✦</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">Custom Report</div>
+          <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            Build any report your stakeholders require — regulatory submissions, 
+            lender reports, ESG summaries, or internal KPI packages. 
+            Your structure. Your KPIs. Your format.
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="padding: 2px 8px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.15); border-radius: 100px; font-size: 10px; color: var(--gold-400);">Any cadence</span>
+            <span style="padding: 2px 8px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.15); border-radius: 100px; font-size: 10px; color: var(--gold-400);">PDF / DOCX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second row: more report types -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px;">
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 18px;">💰</span>
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">CFO Financial Summary</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">Cost centres, variance vs. budget, cash position</div>
+          </div>
+        </div>
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 18px;">🦺</span>
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Safety &amp; ESG Report</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">LTI rates, incident log, ESG KPIs by period</div>
+          </div>
+        </div>
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 18px;">🔬</span>
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Exploration Update</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">Drill results, resource estimates, project milestones</div>
+          </div>
+        </div>
+        <div style="background: var(--navy-700); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px 20px; display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 18px;">📊</span>
+          <div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Regulatory Submission</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">NI 43-101 &amp; JORC compliant report templates</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 13px; color: var(--text-tertiary); text-align: center;">
+        All report types are generated from the same validated KPI layer. 
+        No re-entering data. No formatting inconsistencies. 
+        Every report reflects the same single source of truth.
+        <a href="#pilot" style="color: var(--gold-300); margin-left: 6px;">Discuss your reporting requirements →</a>
+      </p>
+    </div>
+
+    <div class="solution-cta">
+      <a href="#how-it-works" class="btn-ghost">See the Full Platform</a>
+      <a href="#pilot" class="btn-primary">Start with a Pilot</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     06. HOW IT WORKS
+     ================================================ -->
+<section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+  <div class="how-inner">
+    
+    <div class="how-header fade-up">
+      <div class="section-label" style="justify-content:center;">
+        <span class="eyebrow">How It Works</span>
+      </div>
+      <h2 id="how-heading" class="display-lg">
+        From raw data to boardroom<br>insight in three steps
+      </h2>
+      <p>No 6-month ERP implementation. No analytics team required. 
+      ConciseOne is designed for rapid deployment — your pilot delivers value in weeks.</p>
+    </div>
+
+    <div class="steps">
+
+      <!-- STEP 1 -->
+      <div class="step">
+        <div class="step-content fade-up">
+          <div class="step-number">01</div>
+          <span class="step-eyebrow">Connect</span>
+          <h3 class="step-title">Connect your existing data sources</h3>
+          <p class="step-body">
+            ConciseOne connects directly to your ERP (SAP, Pronto, Odoo), 
+            Excel/CSV uploads, LIMS, CMMS, and safety platforms. 
+            No data migration. No rip-and-replace. 
+            We work with what you already have.
+          </p>
+          <div class="step-bullets">
+            <div class="step-bullet">REST API connectors for ERP systems</div>
+            <div class="step-bullet">Scheduled CSV/XLSX upload with auto-sync</div>
+            <div class="step-bullet">Works alongside Skala Mining, SAP Business One, Pronto</div>
+            <div class="step-bullet">Setup in days, not months</div>
+          </div>
+        </div>
+        <div class="step-visual fade-up fade-up-delay-1">
+          <!-- DEV NOTE: Replace with UI screenshot of Data Sources screen -->
+          <div style="width:100%;">
+            <div style="font-size:12px;color:var(--text-tertiary);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.1em;">Connected Sources</div>
+            <div class="sources-grid">
+              <div class="source-chip">
+                <span class="source-chip-icon">📊</span>
+                <span class="source-chip-label">ERP / SAP</span>
+              </div>
+              <div class="source-chip">
+                <span class="source-chip-icon">📁</span>
+                <span class="source-chip-label">Excel / CSV</span>
+              </div>
+              <div class="source-chip">
+                <span class="source-chip-icon">🧪</span>
+                <span class="source-chip-label">LIMS</span>
+              </div>
+              <div class="source-chip">
+                <span class="source-chip-icon">⚙️</span>
+                <span class="source-chip-label">CMMS</span>
+              </div>
+              <div class="source-chip">
+                <span class="source-chip-icon">🦺</span>
+                <span class="source-chip-label">Safety</span>
+              </div>
+              <div class="source-chip" style="border-style:dashed; opacity:0.5; cursor:pointer;">
+                <span class="source-chip-icon" style="font-size:14px;">＋</span>
+                <span class="source-chip-label">Add Source</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step">
+        <div class="step-content fade-up">
+          <div class="step-number">02</div>
+          <span class="step-eyebrow">Transform</span>
+          <h3 class="step-title">ConciseOne validates, standardizes &amp; analyzes</h3>
+          <p class="step-body">
+            Eight AI-augmented pipeline stages clean and govern your data automatically. 
+            KPIs are mapped to industry standards. 
+            Anomalies are flagged before they reach executives. 
+            Every figure is traceable to its source.
+          </p>
+          <div class="step-bullets">
+            <div class="step-bullet">Automated KPI mapping to WGC / JORC standards</div>
+            <div class="step-bullet">Business rule validation &amp; anomaly detection</div>
+            <div class="step-bullet">Governed semantic KPI layer — single source of truth</div>
+            <div class="step-bullet">AI insight generation grounded in validated data</div>
+          </div>
+        </div>
+        <div class="step-visual fade-up fade-up-delay-1">
+          <div style="width:100%;">
+            <div style="font-size:12px;color:var(--text-tertiary);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.1em;">Pipeline Status</div>
+            <div class="pipeline-flow">
+              <div class="pipeline-stage">
+                <div class="pipeline-dot" style="background:var(--gold-400);"></div>
+                Data Ingestion
+                <span class="pipeline-stage-check">✓ 4 sources</span>
+              </div>
+              <div class="pipeline-stage">
+                <div class="pipeline-dot" style="background:var(--gold-400);"></div>
+                KPI Standardization
+                <span class="pipeline-stage-check">✓ 47 fields</span>
+              </div>
+              <div class="pipeline-stage">
+                <div class="pipeline-dot" style="background:#FFBE2E;"></div>
+                Validation
+                <span class="pipeline-stage-check" style="color:#FFBE2E;">⚠ 2 flags</span>
+              </div>
+              <div class="pipeline-stage">
+                <div class="pipeline-dot" style="background:var(--electric);"></div>
+                Semantic KPI Layer
+                <span class="pipeline-stage-check" style="color:var(--electric);">→ Processing</span>
+              </div>
+              <div class="pipeline-stage" style="opacity:0.4;">
+                <div class="pipeline-dot" style="background:var(--text-tertiary);"></div>
+                AI Insight Engine
+                <span class="pipeline-stage-check" style="color:var(--text-tertiary);">Queued</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step">
+        <div class="step-content fade-up">
+          <div class="step-number">03</div>
+          <span class="step-eyebrow">Deliver</span>
+          <h3 class="step-title">Your C-suite gets live dashboards &amp; board-ready reports</h3>
+          <p class="step-body">
+            Executives open ConciseOne and see every critical KPI, alert, and 
+            AI-generated insight on one screen. Monthly board packs generate 
+            themselves — complete with charts, narrative, and data citations. 
+            Approve and send.
+          </p>
+          <div class="step-bullets">
+            <div class="step-bullet">One-screen executive dashboard with interactive drill-down</div>
+            <div class="step-bullet">AI-written board pack narrative — review and approve</div>
+            <div class="step-bullet">Real-time threshold alerts with AI-generated explanation</div>
+            <div class="step-bullet">Investor-ready reports with consistent formatting</div>
+          </div>
+        </div>
+        <div class="step-visual fade-up fade-up-delay-1">
+          <!-- DEV NOTE: Replace with screenshot of board pack preview UI -->
+          <div style="width:100%;">
+            <div style="font-size:12px;color:var(--text-tertiary);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.1em;">Board Pack — Q1 2026</div>
+            <div style="background:var(--navy-700);border-radius:8px;padding:16px;border:1px solid var(--border-subtle);">
+              <div style="background:white;border-radius:4px;padding:12px;color:#1A1A1A;">
+                <div style="height:4px;background:var(--gold-400);border-radius:2px;margin-bottom:10px;"></div>
+                <div style="font-size:12px;font-weight:700;color:#1A1A1A;margin-bottom:4px;">Akwaaba Gold Limited</div>
+                <div style="font-size:10px;color:#666;margin-bottom:10px;">Q1 2026 Board Report — Executive Summary</div>
+                <div style="height:6px;background:#E8E8E8;border-radius:2px;margin-bottom:4px;"></div>
+                <div style="height:6px;background:#E8E8E8;border-radius:2px;margin-bottom:4px;width:85%;"></div>
+                <div style="height:6px;background:#E8E8E8;border-radius:2px;width:70%;margin-bottom:10px;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;">
+                  <div style="background:#F5F0E8;border-radius:3px;padding:6px;">
+                    <div style="font-size:9px;color:#666;">Production</div>
+                    <div style="font-size:14px;font-weight:700;color:#1A1A1A;">8,240 oz</div>
+                  </div>
+                  <div style="background:#F5F0E8;border-radius:3px;padding:6px;">
+                    <div style="font-size:9px;color:#666;">AISC</div>
+                    <div style="font-size:14px;font-weight:700;color:#1A1A1A;">$1,187/oz</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;padding:6px;background:rgba(62,174,255,0.08);border-radius:3px;border-left:2px solid #3EAEFF;">
+                  <div style="font-size:9px;color:#3EAEFF;font-weight:600;">AI INSIGHT</div>
+                  <div style="font-size:9px;color:#555;line-height:1.4;">Recovery drop linked to reagent variance. Recommend audit.</div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px;">
+                <div style="padding:5px 12px;background:var(--navy-600);border-radius:4px;font-size:11px;color:var(--text-secondary);cursor:pointer;">Review</div>
+                <div style="padding:5px 12px;background:var(--gold-400);border-radius:4px;font-size:11px;color:var(--navy-950);font-weight:600;cursor:pointer;">Send to Board</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     07. CORE FEATURES
+     ================================================ -->
+<section class="features" id="features" aria-labelledby="features-heading">
+  <div class="features-inner">
+    
+    <div class="features-header">
+      <div>
+        <div class="section-label">
+          <span class="eyebrow">Platform Features</span>
+        </div>
+        <h2 id="features-heading" class="display-lg fade-up">Everything your 
+        C-suite needs.<br>Nothing they don't.</h2>
+      </div>
+      <p class="fade-up fade-up-delay-1" style="font-size:16px;color:var(--text-secondary);line-height:1.7;">
+        Six core capabilities designed around how executives 
+        actually make decisions — not how analysts build models.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--gold-400)" stroke-width="1.5">
+            <rect x="2" y="2" width="7" height="7" rx="1"/>
+            <rect x="11" y="2" width="7" height="7" rx="1"/>
+            <rect x="2" y="11" width="7" height="7" rx="1"/>
+            <rect x="11" y="11" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <div class="feature-title">Live Executive Dashboard</div>
+        <div class="feature-desc">All critical KPIs on one screen. 
+        Interactive drill-down from board level to root cause. 
+        Designed for C-suite, not analysts.</div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(62,174,255,0.1);border:1px solid rgba(62,174,255,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--electric)" stroke-width="1.5">
+            <circle cx="10" cy="10" r="8"/>
+            <path d="M10 6v4l3 3"/>
+          </svg>
+        </div>
+        <div class="feature-title">Real-Time Alert Engine</div>
+        <div class="feature-desc">Threshold breach alerts delivered to email, Slack, and mobile 
+        — each paired with an AI-generated explanation of the root cause.</div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--gold-400)" stroke-width="1.5">
+            <path d="M4 4h12v2H4zM4 9h8v2H4zM4 14h6v2H4z"/>
+          </svg>
+        </div>
+        <div class="feature-title">AI Narrative Board Pack</div>
+        <div class="feature-desc">Board packs assembled automatically. AI writes the narrative. 
+        You review, approve, and send. Consistent formatting, every month.</div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(62,174,255,0.1);border:1px solid rgba(62,174,255,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--electric)" stroke-width="1.5">
+            <path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/>
+            <path d="M10 6v4"/>
+            <path d="M8 10h4"/>
+          </svg>
+        </div>
+        <div class="feature-title">AI Chat &amp; Query Engine</div>
+        <div class="feature-desc">Ask "Why did AISC spike last week?" Get an instant answer with 
+        charts, driver attribution, and data citations — grounded in your KPIs.</div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--gold-400)" stroke-width="1.5">
+            <path d="M5 3h10a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+            <path d="M7 8h6M7 12h4"/>
+          </svg>
+        </div>
+        <div class="feature-title">Data Validation Engine</div>
+        <div class="feature-desc">Automated anomaly detection and business rule checks run before 
+        data reaches executives. Completeness scores, flagged anomalies, audit trails.</div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="feature-item">
+        <div class="feature-icon" style="background:rgba(62,174,255,0.1);border:1px solid rgba(62,174,255,0.2);">
+          <svg viewBox="0 0 20 20" fill="none" stroke="var(--electric)" stroke-width="1.5">
+            <path d="M3 10h14M10 3v14"/>
+            <circle cx="10" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="feature-title">Universal Data Connector</div>
+        <div class="feature-desc">Integrates with SAP, Pronto, Odoo, Skala, Excel/CSV, LIMS, CMMS, 
+        and safety systems. Works on top of your existing ERP — not instead of it.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     08. INDUSTRIES
+     ================================================ -->
+<section class="industries" id="industries" aria-labelledby="industries-heading">
+  <div class="industries-inner">
+    
+    <div class="industries-header fade-up">
+      <div class="section-label" style="justify-content:center;">
+        <span class="eyebrow">Industries</span>
+      </div>
+      <h2 id="industries-heading" class="display-lg">
+        Built for mining.<br>
+        Designed for <em style="font-style:italic;color:var(--gold-400);">every industry</em> that runs on operations.
+      </h2>
+      <p>Executive reporting complexity is not unique to mining. 
+      We start where the pain is deepest — and expand where the pattern repeats.</p>
+    </div>
+
+    <div class="industries-grid fade-up fade-up-delay-1">
+      
+      <!-- MINING (Active) -->
+      <div class="industry-card active">
+        <span class="industry-icon">⛏️</span>
+        <div class="industry-name">Mining &amp; Exploration</div>
+        <div class="industry-status live">
+          <span style="width:6px;height:6px;border-radius:50%;background:#28C840;display:block;"></span>
+          Now Available
+        </div>
+        <div class="industry-desc">
+          Purpose-built for Canadian junior and mid-tier mining companies. 
+          Covers production, AISC, recovery, safety, and investor reporting.
+        </div>
+        <div class="industry-bullets">
+          <div class="industry-bullet">Production &amp; AISC dashboards</div>
+          <div class="industry-bullet">NI 43-101 / JORC compliant reporting</div>
+          <div class="industry-bullet">1,073 Canadian TSX/TSX-V companies</div>
+          <div class="industry-bullet">Pilot partnerships open now</div>
+        </div>
+      </div>
+
+      <!-- Energy (Future) -->
+      <div class="industry-card future">
+        <span class="industry-icon">⚡</span>
+        <div class="industry-name">Energy</div>
+        <div class="industry-status soon">Coming Soon</div>
+        <div class="industry-desc">
+          Oil &amp; gas, renewables, and utilities. 
+          Same executive reporting problem, different KPI vocabulary.
+        </div>
+      </div>
+
+      <!-- Agriculture (Future) -->
+      <div class="industry-card future">
+        <span class="industry-icon">🌾</span>
+        <div class="industry-name">Agriculture</div>
+        <div class="industry-status soon">Coming Soon</div>
+        <div class="industry-desc">
+          Commodity producers and agri-processors. 
+          Yield, cost, and seasonal performance reporting.
+        </div>
+      </div>
+
+      <!-- Manufacturing (Future) -->
+      <div class="industry-card future">
+        <span class="industry-icon">🏭</span>
+        <div class="industry-name">Manufacturing</div>
+        <div class="industry-status soon">Coming Soon</div>
+        <div class="industry-desc">
+          Industrial and process manufacturers. 
+          OEE, throughput, and operational cost reporting.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     09. COMPETITIVE POSITIONING
+     ================================================ -->
+<section class="positioning" id="positioning" aria-labelledby="positioning-heading">
+  <div class="positioning-inner">
+    
+    <div class="positioning-header fade-up">
+      <div class="section-label" style="justify-content:center;">
+        <span class="eyebrow">Why ConciseOne</span>
+      </div>
+      <h2 id="positioning-heading" class="display-lg">
+        Not another BI tool.<br>
+        Not another ERP.
+      </h2>
+      <p>ConciseOne sits above your existing systems as the executive intelligence layer — 
+      delivering what neither BI tools nor ERPs were designed to provide.</p>
+    </div>
+
+    <div class="comparison-cards fade-up fade-up-delay-1">
+      
+      <!-- Traditional BI -->
+      <div class="comparison-card">
+        <div class="comp-card-title">Category A</div>
+        <div class="comp-card-name">Traditional BI Tools</div>
+        <div class="comp-items">
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Beautiful charts and visualizations
+          </div>
+          <div class="comp-item">
+            <div class="comp-check partial">~</div>
+            Requires an analyst to build and maintain
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            No automated board pack narrative
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            No mining-specific AI insight engine
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            No data validation or governance
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            No NL query for executives
+          </div>
+        </div>
+      </div>
+
+      <!-- ConciseOne (Featured) -->
+      <div class="comparison-card featured">
+        <div class="comp-card-title">ConciseData</div>
+        <div class="comp-card-name">ConciseOne™</div>
+        <div class="comp-items">
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Live executive dashboard — no analyst needed
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            AI board pack narrative — auto-generated
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Mining-specific AI insight &amp; driver attribution
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Built-in data validation &amp; audit lineage
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Natural language query for C-suite
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Rapid deployment — weeks, not months
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise ERP -->
+      <div class="comparison-card">
+        <div class="comp-card-title">Category B</div>
+        <div class="comp-card-name">Enterprise ERP</div>
+        <div class="comp-items">
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Strong financial &amp; operations management
+          </div>
+          <div class="comp-item">
+            <div class="comp-check yes">✓</div>
+            Compliance &amp; procurement workflows
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            Not designed for executive consumption
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            No automated board pack generation
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            4–10 month implementation timelines
+          </div>
+          <div class="comp-item">
+            <div class="comp-check no">✗</div>
+            $400K–$1M+ upfront cost
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--text-tertiary);">
+      ConciseOne integrates with and sits above your existing ERP. 
+      It is not a replacement — it is the executive intelligence layer your ERP never had.
+    </p>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     10. VALIDATION & TRACTION
+     ================================================ -->
+<section class="traction" id="traction" aria-labelledby="traction-heading">
+  <div class="traction-inner">
+    
+    <div class="traction-header fade-up">
+      <div class="section-label">
+        <span class="eyebrow">Traction &amp; Validation</span>
+      </div>
+      <h2 id="traction-heading" class="display-lg">
+        We asked before we built.<br>
+        The industry <em style="font-style:italic; color: var(--gold-400);">confirmed every assumption.</em>
+      </h2>
+      <p>
+        Every feature in ConciseOne exists because a C-suite executive or reporting lead 
+        told us it was missing from their stack. Zero features built on guesswork.
+        100% traced to structured discovery.
+      </p>
+    </div>
+
+    <div class="traction-grid fade-up fade-up-delay-1">
+      <div class="traction-metric">
+        <!-- DEV NOTE: Animate count-up on scroll -->
+        <div class="traction-number">9</div>
+        <div class="traction-desc">
+          Structured C-suite &amp; reporting lead interviews — 
+          <strong style="color: var(--text-primary);">100% confirmed the same core problem</strong>
+        </div>
+      </div>
+      <div class="traction-metric">
+        <div class="traction-number">10+</div>
+        <div class="traction-desc">
+          Live discovery conversations at PDAC 2026 — 
+          <strong style="color: var(--text-primary);">not a single company said the problem didn't exist</strong>
+        </div>
+      </div>
+      <div class="traction-metric">
+        <div class="traction-number">3–5</div>
+        <div class="traction-desc">
+          Paid pilot introductions secured through Canada High Commission — 
+          <strong style="color: var(--text-primary);">active pipeline, not a waitlist</strong>
+        </div>
+      </div>
+      <div class="traction-metric">
+        <div class="traction-number">89<span style="font-size:28px; color: var(--text-secondary);">%</span></div>
+        <div class="traction-desc">
+          Of discovery respondents ranked the executive dashboard as a 
+          <strong style="color: var(--text-primary);">must-have, not a nice-to-have</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEV NOTE: "Zero = signal" callout bar — full width, gold border left -->
+    <div style="margin: 40px 0; padding: 28px 36px; background: var(--navy-800); border-left: 3px solid var(--gold-400); border-radius: 0 var(--radius-md) var(--radius-md) 0;" class="fade-up">
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 36px; font-weight: 500; color: var(--gold-400); line-height: 1; margin-bottom: 6px;">$0</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Spent on paid marketing to validate the problem. Every insight came from direct discovery.</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 36px; font-weight: 500; color: var(--gold-400); line-height: 1; margin-bottom: 6px;">2</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Days at PDAC 2026. Enough time to validate the problem across a global junior mining audience.</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 36px; font-weight: 500; color: var(--gold-400); line-height: 1; margin-bottom: 6px;">1,073</div>
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Canadian-listed junior mining companies on TSX &amp; TSX-V — all facing the same reporting gap we're solving.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="traction-events fade-up fade-up-delay-2">
+      <div class="traction-event">
+        <div class="traction-event-date">March 2026</div>
+        <div class="traction-event-title">PDAC 2026 — World's Largest Mining Conference</div>
+        <div class="traction-event-body">
+          Two days. Ten-plus validated conversations with junior mining executives and 
+          reporting leads. Every company we spoke to was managing reporting manually 
+          or with disconnected tools. Zero companies said executive reporting was solved. 
+          First-hand competitive intelligence on Skala Mining / Talan gathered on the floor.
+        </div>
+      </div>
+      <div class="traction-event">
+        <div class="traction-event-date">2026 · Cohort 1</div>
+        <div class="traction-event-title">DMZ Black Innovation Programs</div>
+        <div class="traction-event-body">
+          Accepted into the inaugural DMZ BIP cohort at Toronto Metropolitan University — 
+          a competitive, structured program for high-potential early-stage founders. 
+          Industry coach Olu Osunrinde independently validated the executive reporting 
+          problem with both founders before we joined forces.
+        </div>
+      </div>
+      <div class="traction-event">
+        <div class="traction-event-date">Active Pipeline</div>
+        <div class="traction-event-title">Canada High Commission — Pilot Introductions</div>
+        <div class="traction-event-body">
+          A Canada High Commission commercial lead has committed to facilitating 
+          introductions to 3–5 junior mining companies for paid pilot engagements. 
+          This is an active commercial pipeline — not an expression of interest. 
+          Pilot execution is the immediate next milestone.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     11. PRICING
+     ================================================ -->
+<section class="pricing" id="pricing" aria-labelledby="pricing-heading">
+  <div class="pricing-inner">
+    
+    <div class="pricing-header fade-up">
+      <div class="section-label" style="justify-content:center;">
+        <span class="eyebrow">Pricing</span>
+      </div>
+      <h2 id="pricing-heading" class="display-lg">Simple, transparent pricing.<br>
+      Built for junior companies.</h2>
+      <p>
+        A fraction of the cost of enterprise BI — with faster time-to-value 
+        and an executive-first experience your analysts can't build themselves.
+      </p>
+    </div>
+
+    <div class="pricing-grid fade-up fade-up-delay-1">
+      
+      <!-- Pilot Tier -->
+      <div class="pricing-card">
+        <div class="pricing-tier">Tier 1</div>
+        <div class="pricing-name">Pilot</div>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:4px;">
+          Co-develop your executive intelligence layer. 
+          Ideal for companies validating the platform with their own data.
+        </p>
+        <div class="pricing-price">
+          <div style="font-size:14px;color:var(--text-tertiary);margin-bottom:8px;">Starting at</div>
+          <div class="pricing-amount">
+            <sup>$</sup>500<span class="mo">/mo</span>
+          </div>
+          <div class="pricing-per-user">+ $50 per user per month · avg. 10 users = ~$1,000/mo</div>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            Executive Dashboard — live KPI tiles &amp; drill-down
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            AI Insight Engine — natural language queries
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            Automated Board Pack Generator
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            Up to 3 data source integrations
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            Onboarding &amp; data mapping support
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check">◆</span>
+            Preferential long-term pricing locked in
+          </div>
+        </div>
+        <a href="#pilot" class="btn-ghost" style="width:100%;justify-content:center;">Apply for Pilot</a>
+      </div>
+
+      <!-- Growth Tier (Featured) -->
+      <div class="pricing-card featured">
+        <div class="pricing-card-badge">Most Popular</div>
+        <div class="pricing-tier">Tier 2</div>
+        <div class="pricing-name">Growth</div>
+        <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:4px;">
+          Full platform deployment for companies ready to make 
+          ConciseOne their permanent executive intelligence layer.
+        </p>
+        <div class="pricing-price">
+          <div style="font-size:14px;color:var(--text-tertiary);margin-bottom:8px;">Starting at</div>
+          <div class="pricing-amount">
+            <sup>$</sup>1,000<span class="mo">/mo</span>
+          </div>
+          <div class="pricing-per-user">Based on company size · $50/user/month · avg. 10 users</div>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Everything in Pilot, plus:
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Unlimited data source integrations
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Full approval workflow &amp; audit trail
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Investor report pack with NI 43-101 / JORC templates
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Priority support &amp; dedicated onboarding
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-feature-check" style="color:var(--gold-400);">◆</span>
+            Multi-site &amp; multi-currency support
+          </div>
+        </div>
+        <a href="#pilot" class="btn-primary" style="width:100%;justify-content:center;">
+          Get Started
+          <svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="pricing-footnote fade-up">
+      Pricing is per company, not per data volume. Enterprise and multi-site pricing available on request. 
+      All pilot partners receive preferential long-term rates. 
+      <a href="#pilot" style="color:var(--gold-300);">Contact us to discuss your situation →</a>
+    </p>
+
+  </div>
+</section>
+
+<hr class="gold-rule">
+
+<!-- ================================================
+     12. TEAM
+     ================================================ -->
+<section class="team" id="team" aria-labelledby="team-heading">
+  <div class="team-inner">
+    
+    <div class="team-header fade-up">
+      <div class="section-label" style="justify-content:center;">
+        <span class="eyebrow">Our Team</span>
+      </div>
+      <h2 id="team-heading" class="display-lg">
+        Built by operators.<br>
+        Guided by researchers.
+      </h2>
+      <p>
+        ConciseData was founded by two operations professionals who 
+        independently identified the same executive reporting gap — 
+        then joined forces to close it.
+      </p>
+    </div>
+
+    <div class="team-section-label">Founders</div>
+    <div class="founders-grid fade-up">
+      
+      <!-- Founder 1 -->
+      <div class="team-card">
+        <div class="team-avatar">
+          <!-- DEV NOTE: Replace with <img src="nana-headshot.jpg" alt="Nana"> -->
+          N
+        </div>
+        <div class="team-info">
+          <div class="team-name">Nana [Last Name]</div>
+          <div class="team-role">Co-Founder &amp; CEO</div>
+          <p class="team-bio">
+            Operations and data analytics professional with direct experience 
+            in executive reporting for operations-driven industries. 
+            Identified the executive reporting gap firsthand before co-founding ConciseData.
+          </p>
+          <div class="team-affiliations">
+            <span class="affiliation-tag">Schulich School of Business</span>
+            <span class="affiliation-tag">DMZ BIP Cohort 1</span>
+            <span class="affiliation-tag">Schulich Startups</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founder 2 -->
+      <div class="team-card">
+        <div class="team-avatar">EO</div>
+        <div class="team-info">
+          <div class="team-name">Eugene Ofosu-Hene</div>
+          <div class="team-role">Co-Founder &amp; COO</div>
+          <p class="team-bio">
+            Operations and data analyst background with deep experience in 
+            operational performance reporting. Independently validated the same 
+            executive reporting problem in the junior mining sector before joining forces.
+          </p>
+          <div class="team-affiliations">
+            <span class="affiliation-tag">Operations Analytics</span>
+            <span class="affiliation-tag">DMZ BIP Cohort 1</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="team-section-label" style="margin-top:40px;">Advisors &amp; Coaches</div>
+    <div class="advisors-grid fade-up fade-up-delay-1">
+      
+      <!-- Advisor 1 -->
+      <div class="team-card advisor">
+        <div class="team-avatar small">OO</div>
+        <div class="team-info">
+          <div class="team-name">Olu Osunrinde</div>
+          <div class="team-role">Industry Coach · DMZ BIP</div>
+          <p class="team-bio">
+            Industry coach through the DMZ Black Innovation Programs at Toronto Metropolitan 
+            University. Independently validated the executive reporting problem with both founders. 
+            Advising on go-to-market strategy and pilot execution.
+          </p>
+          <div class="team-affiliations">
+            <span class="affiliation-tag">DMZ BIP</span>
+            <span class="affiliation-tag">Toronto Metropolitan University</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advisor 2 -->
+      <div class="team-card advisor">
+        <div class="team-avatar small">DO</div>
+        <div class="team-info">
+          <div class="team-name">Prof. Divinus Oppong-Tawiah</div>
+          <div class="team-role">Academic Coach · Schulich School of Business</div>
+          <p class="team-bio">
+            Associate Professor of Information Systems at York University's Schulich School 
+            of Business. Research expertise in IT innovation, digital platforms, and 
+            AI adoption in organizations. Advising on the academic and research foundations 
+            of the ConciseOne platform.
+          </p>
+          <div class="team-affiliations">
+            <span class="affiliation-tag">Schulich · York University</span>
+            <span class="affiliation-tag">Information Systems</span>
+            <span class="affiliation-tag">Deloitte Cognitive Analytics Lab</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================
+     13. PILOT CTA
+     ================================================ -->
+<section class="cta-section" id="pilot" aria-labelledby="cta-heading">
+  <div class="cta-inner">
+    <span class="cta-tag">Pilot Program — Now Open</span>
+    <h2 id="cta-heading" class="display-lg">
+      Ready to see ConciseOne<br>
+      <em style="font-style:italic;color:var(--gold-400);">built on your data?</em>
+    </h2>
+    <p>
+      We are accepting a limited number of junior mining companies as pilot partners. 
+      You contribute your operational data and domain feedback. 
+      We deliver a live executive dashboard and a polished board pack — within 60 days.
+    </p>
+    <div class="cta-actions">
+      <a href="mailto:hello@concisedataconsult.com" class="btn-primary">
+        Request a Pilot Demo
+        <svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:hello@concisedataconsult.com" class="btn-ghost">Schedule a Call</a>
+    </div>
+    <p class="cta-sub">
+      No long-term commitment required for the pilot. 
+      Pilot partners receive preferential long-term pricing.
+    </p>
+  </div>
+</section>
+
+<!-- ================================================
+     14. FOOTER
+     ================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">
+            <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
+              <rect x="2" y="2" width="6" height="6" rx="1" fill="#07091A"/>
+              <rect x="10" y="2" width="6" height="6" rx="1" fill="#07091A" opacity="0.6"/>
+              <rect x="2" y="10" width="6" height="6" rx="1" fill="#07091A" opacity="0.6"/>
+              <rect x="10" y="10" width="6" height="6" rx="1" fill="#07091A" opacity="0.3"/>
+            </svg>
+          </div>
+          <span class="footer-logo-text">ConciseData Consult Limited</span>
+        </div>
+        <p class="footer-tagline">
+          The executive intelligence platform for operations-driven companies. 
+          Stop assembling. Start deciding.
+        </p>
+        <div class="footer-social">
+          <!-- DEV NOTE: Add actual LinkedIn and Twitter URLs -->
+          <a href="https://linkedin.com/company/concisedataconsult" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+              <path d="M3.5 2a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM2 6h3v8H2V6zm5 0h2.5v1.2c.4-.7 1.3-1.4 2.5-1.4 2.5 0 3 1.6 3 3.7V14h-3v-4.2c0-1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.4-.1.6V14H7V6z"/>
+            </svg>
+          </a>
+          <a href="https://x.com/concisedata" class="social-link" aria-label="X (Twitter)">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+              <path d="M12.6 2H15L9.8 8.1 16 14h-4.5l-3.7-4.9L3.3 14H1l5.5-6.4L1 2h4.6l3.4 4.5L12.6 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product Links -->
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="#product">ConciseOne™ Platform</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#pilot">Request a Demo</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#team">About Us</a></li>
+          <li><a href="#traction">Traction</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <!-- DEV NOTE: Add Blog page for SEO -->
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="footer-contact-item">
+          <a href="mailto:hello@concisedataconsult.com">hello@concisedataconsult.com</a>
+        </p>
+        <p class="footer-contact-item">Toronto, Ontario, Canada</p>
+        <p class="footer-contact-item" style="margin-top:16px;">
+          <a href="#pilot" class="btn-primary" style="padding:10px 18px;font-size:13px;">
+            Book a Demo
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2026 ConciseData Consult Limited. All rights reserved. 
+        ConciseOne™ is a trademark of ConciseData Consult Limited.
+      </p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/security">Security</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================
+     JAVASCRIPT — SCROLL ANIMATIONS
+     DEV NOTE: Copy this exact JS block.
+     Handles: (1) scroll fade-up animations,
+     (2) stat count-up animations,
+     (3) nav background on scroll.
+     ================================================ -->
+<script>
+  /* --- Fade-up on scroll --- */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  /* --- Nav background on scroll --- */
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(7, 9, 26, 0.97)';
+    } else {
+      nav.style.background = 'rgba(11, 15, 36, 0.85)';
+    }
+  });
+
+  /* --- Count-up animation for stats --- */
+  function animateCounter(el, target, suffix = '', duration = 1800) {
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) {
+        el.textContent = target + suffix;
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(start) + suffix;
+      }
+    }, 16);
+  }
+
+  /* DEV NOTE: Add IntersectionObserver for stat-number elements
+     that triggers animateCounter on first scroll entry.
+     Target numbers: 40 (%), 3-5 (days — skip), 1073 (count), 9, 10, 8/9 */
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const statEls = e.target.querySelectorAll('.stat-number, .traction-number');
+        /* DEV NOTE: Map each stat element to its final value and trigger animation */
+        statObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.problem-stats, .traction-grid').forEach(el => {
+    statObserver.observe(el);
+  });
+
+  /* --- Smooth scroll for anchor links --- */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+<!-- ================================================
+     SEO META TAGS (add to <head>)
+     ================================================
+
+  <meta property="og:title" content="ConciseOne — AI-Powered Executive Reporting Platform">
+  <meta property="og:description" content="Replace manual board pack assembly with a live AI dashboard and automated board-ready reports. Built for junior mining. Designed for every operations-driven industry.">
+  <meta property="og:image" content="https://www.concisedataconsult.com/og-image.png">
+  <meta property="og:url" content="https://www.concisedataconsult.com">
+  <meta property="og:type" content="website">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ConciseOne — Executive Intelligence Platform">
+  <meta name="twitter:description" content="Stop spending 40% of your week building reports. ConciseOne delivers live dashboards and AI board packs — automatically.">
+  
+  <link rel="canonical" href="https://www.concisedataconsult.com">
+  
+  Structured Data (JSON-LD — paste in <head>):
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ConciseOne",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "AI-powered executive reporting platform for operations-driven companies. Live KPI dashboards, AI insight engine, and automated board pack generation.",
+    "offers": {
+      "@type": "Offer",
+      "price": "500",
+      "priceCurrency": "CAD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "500",
+        "priceCurrency": "CAD",
+        "unitText": "MONTH"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "ConciseData Consult Limited",
+      "url": "https://www.concisedataconsult.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      }
+    }
+  }
+  <\/script>
+  ================================================ -->
+
+</body>
+</html>
