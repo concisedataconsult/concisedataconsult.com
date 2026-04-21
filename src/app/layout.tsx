@@ -1,21 +1,29 @@
 import type { Metadata } from "next"
-import { DM_Sans, JetBrains_Mono } from "next/font/google"
+import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["300", "400", "500", "600"],
+})
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-body",
+  weight: ["400", "500", "600"],
 })
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  weight: ["400", "500"],
 })
 
 export const metadata: Metadata = {
   title: "ConciseData Consult | Executive Intelligence Platform",
   description:
-    "ConciseOne replaces manual spreadsheet reporting with a live executive dashboard and board-ready AI reporting for operations-driven companies.",
+    "ConciseOne replaces manual spreadsheet reporting with a live AI-powered executive dashboard and automated board-ready reports.",
 }
 
 export default function RootLayout({
@@ -24,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${jetBrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${dmSans.variable} ${jetBrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   )
